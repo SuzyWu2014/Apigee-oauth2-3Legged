@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="7" name="GeorgeLookupJson">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1469225300364</CreatedAt>
+    <CreatedBy>shujinwu@onid.oregonstate.edu</CreatedBy>
+    <Description></Description>
+    <DisplayName>GeorgeLookupJson</DisplayName>
+    <LastModifiedAt>1469236777650</LastModifiedAt>
+    <LastModifiedBy>shujinwu@onid.oregonstate.edu</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-Set-Variables</Policy>
+        <Policy>GenerateAuthorizationCode</Policy>
+        <Policy>GetAccessToken</Policy>
+        <Policy>GetThirdPartyAccessToken</Policy>
+        <Policy>OAuth-v20-Store-External-Token</Policy>
+        <Policy>Verify-OAuth-v20-Access-Token</Policy>
+        <Policy>VerifyAccessToken</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>searchForKeyword</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://searchForKeyword.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

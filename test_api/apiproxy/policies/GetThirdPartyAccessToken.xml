@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="GetThirdPartyAccessToken">
+    <Request variable="googleAuthRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+            </Headers>
+            <Payload contentType="application/json" variablePrefix="$" variableSuffix="%"> {
+      "code": "$request.queryparam.code%"
+      "client_id":"myclient id"
+      "client_secret":"mysecret"
+      redirect_uri:"my redirect uri"
+      "grant_type":"authorization_code"
+      }
+      </Payload>
+            <Verb>POST</Verb>
+        </Set>
+    </Request>
+    <Response>calloutResponse</Response>
+    <Timeout>30000</Timeout>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://www.googleapis.com/oauth2/v3/token</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

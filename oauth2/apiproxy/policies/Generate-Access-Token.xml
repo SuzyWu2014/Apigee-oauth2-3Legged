@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="Generate-Access-Token">
+    <DisplayName>Generate Access Token</DisplayName>
+    <ExpiresIn>360000000</ExpiresIn>
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.queryparam.grant_type</GrantType>
+    <Code>request.queryparam.code</Code>
+    <ClientId>request.queryparam.client_id</ClientId>
+    <RedirectUri>request.queryparam.redirect_uri</RedirectUri>
+    <Scope>request.queryparam.scope</Scope>
+    <GenerateResponse enabled="true"/>
+</OAuthV2>
