@@ -21,11 +21,21 @@
             <Description/>
             <Request>
                 <Step>
-                    <FaultRules/>
+                    <Name>Validate-Ticket</Name>
+                </Step>
+                <Step>
                     <Name>Generate-Authorization-Code</Name>
                 </Step>
             </Request>
-            <Response/>
+            <Response>
+                <Step>
+                    <Name>Validate-Ticket</Name>
+                </Step>
+                <Step>
+                    <Condition>triggerError equals "true"</Condition>
+                    <Name>Authentication-Failure</Name>
+                </Step>
+            </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/auth-code")</Condition>
         </Flow>
         <Flow name="GenerateToken">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="Authentication-Failure">
+    <DisplayName>Authentication-Failure</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json">
+                {"Error":"FailedToResolveAuthorizationCode", "Reason":"Unable to validate ticket with CAS"}
+            </Payload>
+            <StatusCode>500</StatusCode>
+            <ReasonPhrase>Invalid ticket</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

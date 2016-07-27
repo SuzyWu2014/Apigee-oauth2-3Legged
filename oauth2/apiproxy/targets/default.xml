@@ -14,9 +14,18 @@
                     <Name>redirect-to-login</Name>
                 </Step>
             </Request>
-            <Response>
-            </Response>
+            <Response/>
             <Condition>(proxy.pathsuffix MatchesPath "/authorize")</Condition>
+        </Flow>
+        <Flow name="GenerateAuthCode">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Validate-Ticket</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/auth-code")</Condition>
         </Flow>
     </Flows>
     <PreFlow name="PreFlow">
