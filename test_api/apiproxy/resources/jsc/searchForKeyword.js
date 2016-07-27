@@ -31,7 +31,7 @@ if (context.flow == "TARGET_RESP_FLOW"){
     //print(theXml);
     var theSearchQueryString = context.getVariable("request.queryparam.q");
     print(theSearchQueryString);
-    
+
     var matches = [];
     if(theSearchQueryString !== null){
          var matches = theLookupFile.filter(isLookupEntryMatch,theSearchQueryString);
