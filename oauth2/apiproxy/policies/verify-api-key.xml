@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VerifyAPIKey async="false" continueOnError="false" enabled="true" name="verify-api-key">
     <DisplayName>Verify Client ID</DisplayName>
-    <APIKey ref="request.queryparam.client_id"/>
+    <FaultRules/>
+    <Properties/>
+    <APIKey ref="request.queryparam.client_id"></APIKey>
 </VerifyAPIKey>

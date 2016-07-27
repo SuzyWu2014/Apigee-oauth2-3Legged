@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ProxyEndpoint name="default">
-    <RouteRule name="RedirectToLogin">
-        <Condition>(proxy.pathsuffix MatchesPath "/authorize")</Condition>
-        <URL>https://login.oregonstate.edu/cas-dev/login?service=https%3A%2F%2Fosu-test.apigee.net%2Fv1%2Foauth2%2Fauth-code%3Fresponse_type%3Dcode%26client_id%3DBAGn4qKd6dggoWPqACfVC3JM0vie0uDk%26redirect_url%3Dhttps%3A%2F%2Fosu-test.apigee.net%2Fv1%2Fsite-directory</URL>
-    </RouteRule>
     <Description/>
     <FaultRules/>
-    <PreFlow name="PreFlow">
-        <Request/>
-        <Response/>
-    </PreFlow>
     <Flows>
         <Flow name="RedirectToLogin">
             <Description/>
-            <Request/>
-            <Response/>
+            <Request>
+                <Step>
+                    <Name>redirect-to-login</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>redirect-to-login</Name>
+                </Step>
+            </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/authorize")</Condition>
         </Flow>
         <Flow name="GenerateAuthCode">
             <Description/>
             <Request>
                 <Step>
+                    <FaultRules/>
                     <Name>Generate-Authorization-Code</Name>
                 </Step>
             </Request>
@@ -31,6 +32,7 @@
             <Description/>
             <Request>
                 <Step>
+                    <FaultRules/>
                     <Name>Generate-Access-Token</Name>
                 </Step>
             </Request>
@@ -42,6 +44,10 @@
         <Request/>
         <Response/>
     </PostFlow>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
     <HTTPProxyConnection>
         <BasePath>/v1/oauth2</BasePath>
         <Properties/>
