@@ -6,41 +6,10 @@
     </RouteRule>
     <Description/>
     <PreFlow name="PreFlow">
-        <Request>
-        </Request>
+        <Request/>
         <Response/>
     </PreFlow>
     <Flows>
-        <Flow name="RedirectToLogin">
-            <Description/>
-            <Request>
-                <Step>
-                    <Name>verify-api-key</Name>
-                </Step>
-            </Request>
-            <Response/>
-            <Condition>(proxy.pathsuffix MatchesPath "/oauth/authorize")</Condition>
-        </Flow>
-        <Flow name="GetAuthCode">
-            <Description/>
-            <Request>
-                <Step>
-                    <Name>GenerateAuthorizationCode</Name>
-                </Step>
-            </Request>
-            <Response/>
-            <Condition>(proxy.pathsuffix MatchesPath "/oauth/authorizationcode")</Condition>
-        </Flow>
-        <Flow name="GetAccessToken">
-            <Description/>
-            <Request>
-                <Step>
-                    <Name>GetAccessToken</Name>
-                </Step>
-            </Request>
-            <Response/>
-            <Condition>(proxy.pathsuffix MatchesPath "/oauth/accesstoken")</Condition>
-        </Flow>
     </Flows>
     <PostFlow name="PostFlow">
         <Request/>

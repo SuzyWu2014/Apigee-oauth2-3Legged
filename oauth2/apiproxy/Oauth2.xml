@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="9" name="Oauth2">
+<APIProxy revision="11" name="Oauth2">
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1469658813100</CreatedAt>
+    <CreatedAt>1469725158077</CreatedAt>
     <CreatedBy>shujinwu@onid.oregonstate.edu</CreatedBy>
     <Description>A centralized proxy API to generate authorization code and token</Description>
     <DisplayName>Oauth2</DisplayName>
-    <LastModifiedAt>1469658813100</LastModifiedAt>
+    <LastModifiedAt>1469725158077</LastModifiedAt>
     <LastModifiedBy>shujinwu@onid.oregonstate.edu</LastModifiedBy>
     <Policies>
         <Policy>Authentication-Failure</Policy>
         <Policy>Generate-Access-Token</Policy>
         <Policy>Generate-Authorization-Code</Policy>
+        <Policy>Generate-Redirect-Response</Policy>
         <Policy>Validate-Ticket</Policy>
         <Policy>redirect-to-login</Policy>
-        <Policy>remove-query-param-apikey</Policy>
-        <Policy>verify-api-key</Policy>
     </Policies>
     <ProxyEndpoints>
         <ProxyEndpoint>default</ProxyEndpoint>

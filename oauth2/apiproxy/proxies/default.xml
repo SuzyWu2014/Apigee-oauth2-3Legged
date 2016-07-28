@@ -12,7 +12,7 @@
             </Request>
             <Response>
                 <Step>
-                    <Name>redirect-to-login</Name>
+                    <Name>Generate-Redirect-Response</Name>
                 </Step>
             </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/authorize")</Condition>

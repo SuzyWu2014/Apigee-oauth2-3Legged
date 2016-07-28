@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OAuthV2 async="false" continueOnError="false" enabled="true" name="Generate-Access-Token">
     <DisplayName>Generate Access Token</DisplayName>
-    <FaultRules/>
-    <Properties/>
-    <ClientId>request.queryparam.client_id</ClientId>
-    <Code>request.queryparam.code</Code>
-    <Attributes/>
-    <ExpiresIn>360000000</ExpiresIn>
-    <ExternalAuthorization>false</ExternalAuthorization>
-    <GrantType>request.queryparam.grant_type</GrantType>
-    <Operation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    <Operation>GenerateAccessToken</Operation>
     <RedirectUri>request.queryparam.redirect_uri</RedirectUri>
-    <GenerateResponse enabled="true">
-        <Format>FORM_PARAM</Format>
-    </GenerateResponse>
-    <ReuseRefreshToken>false</ReuseRefreshToken>
+    <GrantType>request.queryparam.grant_type</GrantType>
+    <Code>request.queryparam.code</Code>
     <Scope>request.queryparam.scope</Scope>
+    <ClientId>request.queryparam.client_id</ClientId>
     <SupportedGrantTypes>
         <GrantType>authorization_code</GrantType>
     </SupportedGrantTypes>
-    <Tokens/>
+    <GenerateResponse enabled="true"/>
+    <ExpiresIn>360000000</ExpiresIn>
 </OAuthV2>
